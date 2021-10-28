@@ -5,6 +5,8 @@
 
 --#2 What is the difference between Union and Union All?
 -- Union will combine the tables but removes duplicates, Union all keeps the duplicates even if thye do not meet the condition 
+-- When we use union to join two select results, the records from the first column will be sorterd ascendingly. But if we use UNION ALL , it will not.
+-- UNION cannot be used in recursive cte, but UNION ALL can.
 
 --#3 What are the other Set Operators SQL Server has?
 -- Intersect and minus
@@ -173,5 +175,3 @@ GROUP BY e1.LastName, e1.FirstName, e1.Title
 --27
 SELECT c.City, c.ContactName AS Name, s.ContactName
 FROM Customers c FULL JOIN Suppliers s ON c.City = s.City
-
-
